@@ -1,0 +1,63 @@
+{
+  "name": "@twin.techies/gst-invoice",
+  "version": "0.1.2",
+  "description": "Generate GST-compliant invoices for India — CGST/SGST/IGST tax calculation, PDF rendering, and e-invoice JSON schema export.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "test": "bun test",
+    "prepublishOnly": "bun run build",
+    "release": "bun run build && npm publish --access public"
+  },
+  "keywords": [
+    "gst",
+    "invoice",
+    "india",
+    "tax",
+    "cgst",
+    "sgst",
+    "igst",
+    "e-invoice",
+    "pdf",
+    "billing",
+    "hsn"
+  ],
+  "author": "Twintechies",
+  "license": "MIT",
+  "homepage": "https://github.com/TwinTricks/gst-invoice#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TwinTricks/gst-invoice.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TwinTricks/gst-invoice/issues"
+  },
+  "dependencies": {
+    "pdfkit": "^0.15.0"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/pdfkit": "^0.13.4",
+    "tsup": "^8.5.1",
+    "typescript": "^5.6.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
