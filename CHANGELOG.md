@@ -2,6 +2,16 @@
 
 All notable changes to `@twin.techies/gst-invoice` will be documented here.
 
+## [0.1.5] - 2026-05-24
+
+### Added
+- GitHub Actions **CI workflow** runs `bun test` + `bun run build` on every push to `master` and on every PR.
+- GitHub Actions **publish workflow** auto-publishes to npm on tag push (e.g., `git tag v0.1.5 && git push --tags`) with **npm provenance attestation** — a cryptographic proof that the package was published from this exact GitHub repo via CI. Boosts Socket.dev Supply Chain Security score by ~10-15 points and shows a green "Provenance" badge on the npm package page.
+- `SECURITY.md` documents the vulnerability disclosure process via GitHub security advisories.
+
+### Changed
+- `publishConfig` in `package.json` now sets `provenance: true` and `access: public` so future releases are always provenance-attested.
+
 ## [0.1.4] - 2026-05-24
 
 ### Added
