@@ -30,10 +30,11 @@ jobs:
       - name: Setup Node for publishing
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           registry-url: 'https://registry.npmjs.org'
 
-      - name: Publish to npm with provenance
+      - name: Upgrade npm (needed for OIDC trusted publishing)
+        run: npm install -g npm@latest
+
+      - name: Publish to npm via OIDC Trusted Publisher
         run: npm publish --provenance --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
