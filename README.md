@@ -1,14 +1,25 @@
 # @twin.techies/gst-invoice
 
 [![npm](https://img.shields.io/npm/v/@twin.techies/gst-invoice.svg)](https://www.npmjs.com/package/@twin.techies/gst-invoice)
+[![Live Demo](https://img.shields.io/badge/live%20demo-storybook-ff4785)](https://6a132a7cd42582454e1f297c-tfbgytflvw.chromatic.com/?path=/story/gst-invoice-invoice-builder--default)
 [![Try on RunKit](https://badge.runkitcdn.com/@twin.techies/gst-invoice.svg)](https://npm.runkit.com/@twin.techies/gst-invoice)
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz_small.svg)](https://stackblitz.com/fork/node?title=gst-invoice-demo&description=Try%20%40twin.techies%2Fgst-invoice%20in%20your%20browser)
 
 Generate **GST-compliant invoices for India** — automatic CGST/SGST vs IGST tax calculation, PDF rendering with 5 templates, and e-invoice (NIC schema v1.1) JSON export.
 
 ## 🚀 Try it live (no install)
 
-**[Open RunKit playground →](https://npm.runkit.com/@twin.techies/gst-invoice)** — paste this to see the tax math instantly:
+**[👉 Interactive playground on Storybook](https://6a132a7cd42582454e1f297c-tfbgytflvw.chromatic.com/?path=/story/gst-invoice-invoice-builder--default)** — build invoices, validate GSTINs, see tax math live, browse 5 templates.
+
+Stories available:
+- [GSTIN Validator](https://6a132a7cd42582454e1f297c-tfbgytflvw.chromatic.com/?path=/story/gst-invoice-gstin-validator--default) — real checksum validation
+- [Tax Computation](https://6a132a7cd42582454e1f297c-tfbgytflvw.chromatic.com/?path=/story/gst-invoice-tax-computation--default) — live CGST/SGST vs IGST split
+- [Invoice Builder](https://6a132a7cd42582454e1f297c-tfbgytflvw.chromatic.com/?path=/story/gst-invoice-invoice-builder--default) — full form → HTML preview
+- [Template Gallery](https://6a132a7cd42582454e1f297c-tfbgytflvw.chromatic.com/?path=/story/gst-invoice-template-gallery--default) — visual mocks of all 5 PDF templates
+- [E-Invoice JSON](https://6a132a7cd42582454e1f297c-tfbgytflvw.chromatic.com/?path=/story/gst-invoice-e-invoice-json-export--default) — NIC IRP v1.1 schema export
+
+> The Storybook is a **browser preview** — PDF download is disabled there because PDF generation requires Node.js. The full library generates real PDFs in your own Next.js / Node app — copy the example code from any story.
+
+Or **[open a RunKit notebook →](https://npm.runkit.com/@twin.techies/gst-invoice)** and paste this to see the tax math instantly:
 
 ```js
 const { computeInvoice, toEInvoiceJSON, amountInWordsINR } = require('@twin.techies/gst-invoice');

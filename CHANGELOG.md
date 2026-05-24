@@ -2,6 +2,13 @@
 
 All notable changes to `@twin.techies/gst-invoice` will be documented here.
 
+## [0.1.4] - 2026-05-24
+
+### Added
+- **Live interactive demo** at https://6a132a7cd42582454e1f297c-tfbgytflvw.chromatic.com/ — Storybook playgrounds for the GSTIN validator, tax computation, invoice builder, template gallery, and e-invoice JSON export. No install required.
+- README badges and per-story deep links to the live demo.
+- Disclaimer in README explaining the Storybook is a browser preview — PDF download is disabled there because PDF generation requires Node.js. The full library works as documented in real Node/Next.js apps.
+
 ## [0.1.3] - 2026-05-23
 
 ### Internal
